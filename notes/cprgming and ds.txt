@@ -1,0 +1,31 @@
+Ternary operator, evaluate only the branch selected by the condition. 
+x = (a > b)?((a > c)? a:c):((b > c)? b:c);
+
+              a > b ?
+             /       \
+          TRUE       FALSE
+           /           \
+       a > c ?        b > c ?
+       /    \         /     \
+      a      c       b       c
+                         ↑
+                       FALSE
+                         |
+                         c = 300
+
+Shift operation
+int a = 15, b = 20, c = 2, d = 5, e = 10, f, g, h, i;
+f = a << c;
+‘a’ is left shifted for ‘c’ times and result stored in ‘f’
+i.e.,
+a = 15 = (1 1 1 1)2
+↓ ↓ ↓ ↓
+1 1 1 1 0 (After first shift)
+↓ ↓ ↓ ↓
+1 1 1 1 0 0 (After second shift)
+One left shift multiplies 15 by 2 = 30
+Again the 2nd left shift multiplies 30 by 2 = 60
+Thus 15 × 22 = 60, where the power of 2 is the number
+of times shift is made. Value of ‘f ’ becomes 60.
+Note: Left shift multiplies the value by 2. Right shift divides
+the value by 2
